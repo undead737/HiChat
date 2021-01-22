@@ -1,28 +1,20 @@
-package ru.lechif.HiChatDden.server.models;
+package ru.lechif.HiChatDden.server.dao.models;
 
 import lombok.*;
 import lombok.experimental.FieldDefaults;
-import org.hibernate.annotations.GenericGenerator;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.lang.NonNull;
 import ru.lechif.HiChatDden.security.models.MongoEntity;
 
-import javax.persistence.*;
-import java.util.Date;
+import java.util.List;
 
 @EqualsAndHashCode(callSuper = true)
 @Document(collection = "users")
 @AllArgsConstructor
 @Data
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class ChatMessage extends MongoEntity {
+public class Chat extends MongoEntity {
+    String name;
     @NonNull
-    Chat chat;
-    @NonNull
-    String senderId;
-    String text;
-    @Lob
-    byte[] content;
-    TypeContent typeContent;
-    MessageStatus status;
+    List<String> participants;
 }

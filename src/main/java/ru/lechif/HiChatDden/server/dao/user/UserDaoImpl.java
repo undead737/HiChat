@@ -4,7 +4,7 @@ import lombok.AccessLevel;
 import lombok.experimental.FieldDefaults;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-import ru.lechif.HiChatDden.server.models.ChatUser;
+import ru.lechif.HiChatDden.server.dao.models.ChatUser;
 
 @Repository
 @FieldDefaults(level = AccessLevel.PRIVATE)

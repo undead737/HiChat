@@ -4,7 +4,7 @@ import lombok.AccessLevel;
 import lombok.experimental.FieldDefaults;
 import org.springframework.stereotype.Service;
 import ru.lechif.HiChatDden.server.dao.chat.ChatDaoImpl;
-import ru.lechif.HiChatDden.server.models.Chat;
+import ru.lechif.HiChatDden.server.dao.models.Chat;
 
 import java.util.List;
 

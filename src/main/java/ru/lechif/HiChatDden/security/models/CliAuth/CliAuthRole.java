@@ -8,8 +8,8 @@ import ru.lechif.HiChatDden.security.models.ApplicationRole;
 import ru.lechif.HiChatDden.security.models.MongoEntity;
 
 @AllArgsConstructor
-@Data
 @FieldDefaults(level = AccessLevel.PRIVATE)
+@Data
 public class CliAuthRole extends MongoEntity implements ApplicationRole {
     String roleName;
 }

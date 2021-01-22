@@ -31,6 +31,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     private final JwtTokenProvider provider;
     private final OauthUserService userService;
     private static final String LOGIN_PATH = "/api/**";
+    private static final String WS_PATH = "/ws/**";
 
     @Autowired
     public SecurityConfig(JwtTokenProvider provider, OauthUserService userService) {
@@ -64,7 +65,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .httpBasic().disable()
                 .csrf().disable()
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-                .and().authorizeRequests().antMatchers(LOGIN_PATH).permitAll()
+                .and().authorizeRequests().antMatchers(LOGIN_PATH).permitAll().antMatchers(WS_PATH).permitAll().antMatchers("/app/**").permitAll()
                 .anyRequest().authenticated().and()
                 .apply(new JwtConfigurer(provider));
 

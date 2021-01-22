@@ -5,8 +5,9 @@ import lombok.experimental.FieldDefaults;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ru.lechif.HiChatDden.server.dao.user.UserDaoImpl;
-import ru.lechif.HiChatDden.server.models.ChatUser;
+import ru.lechif.HiChatDden.server.dao.models.ChatUser;
 
+//todo переделать все на usera с конвертацией в simple
 @Service
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class UserService {

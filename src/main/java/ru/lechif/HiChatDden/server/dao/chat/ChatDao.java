@@ -1,6 +1,6 @@
 package ru.lechif.HiChatDden.server.dao.chat;
 
-import ru.lechif.HiChatDden.server.models.Chat;
+import ru.lechif.HiChatDden.server.dao.models.Chat;
 import ru.lechif.HiChatDden.utility.db.ApplicationDao;
 
 import java.util.List;

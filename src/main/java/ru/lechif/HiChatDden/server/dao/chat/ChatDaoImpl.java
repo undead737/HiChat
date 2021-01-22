@@ -4,8 +4,7 @@ import lombok.AccessLevel;
 import lombok.experimental.FieldDefaults;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-import ru.lechif.HiChatDden.server.dao.message.MessageRepository;
-import ru.lechif.HiChatDden.server.models.Chat;
+import ru.lechif.HiChatDden.server.dao.models.Chat;
 
 import java.util.List;
 
